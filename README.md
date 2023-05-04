@@ -1,39 +1,38 @@
-# Asignacion2_2
-Parte 2 asignación 2 Programacion IV
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Instrucciones y pasos para crear la aplicacion:
+## Getting Started
 
-Crear un nuevo proyecto en React utilizando create-react-app y crear una estructura de carpetas básica en la que puedas trabajar.
+First, run the development server:
 
-Usar javascript ,eslint, el directorio src, sin el directorio experimental "app"
-crear los 3 componentes dentro de la carpeta "components"
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
 
-Crear un componente llamado PokemonList.js que sea el encargado de mostrar la lista de los primeros 100 Pokémon obtenidos a través del API. Para esto, necesitarás utilizar el hook useEffect para hacer una llamada a la API y el hook useState para almacenar la lista de los Pokémon.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Crear un componente llamado PokemonDetail.js que muestre los detalles de un Pokémon seleccionado por el usuario. Para esto, necesitarás hacer una nueva llamada a la API utilizando el ID del Pokémon seleccionado y utilizar el hook useState para almacenar los detalles del Pokémon.
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-Crear un componente de orden superior (HOC) llamado withDataFetching.js que reciba una URL como parámetro y devuelva un nuevo componente que se encargue de hacer la llamada a la API y manejar los estados de carga y error. Este componente se puede reutilizar en PokemonList.js y PokemonDetail.js.
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-Crear un componente llamado SearchBar.js que permita al usuario buscar un Pokémon por su nombre o número. Para esto, necesitarás utilizar el hook useRef para obtener el valor del input y el hook useState para almacenar el resultado de la búsqueda.
-Nota: **Esta parte ya está implementada dentro de PokemonList.jsx** sin haber creado el componente SearchBar por aparte.
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-Agregar una función de búsqueda en PokemonList.js que utilice el resultado de la búsqueda del componente SearchBar.js para agregar el nuevo Pokémon a la lista de los primeros 100.
-Implementar SSR (Server Side Rendering) en PokemonList.js y PokemonDetail.js para mejorar la carga inicial de la aplicación. **Falta implementar esta parte**
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-***DETALLES DE COMO FUNCIONA LA APP SEGÚN LOS CONCEPTOS DADOS:***
+## Learn More
 
-qué hace cada uno de los componentes y cómo interactúan entre sí.
+To learn more about Next.js, take a look at the following resources:
 
-"useRef":
-"useRef" es un hook de React que permite crear una referencia mutable que puede ser actualizada sin necesidad de volver a renderizar el componente. En este código, "useRef" se utiliza para obtener una referencia al input de búsqueda de la lista de Pokémon. Después, se utiliza en el useEffect para darle el foco automáticamente.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-"DataFetching":
-"DataFetching" es un patrón común en React para manejar la obtención de datos de una API. Este componente HOC (High Order Component) se encarga de hacer la llamada a la API de Pokémon y gestionar el estado de los datos (loading, error, y data) a través de los hooks de React useState y useEffect. Luego, "DataFetching" pasa los datos a su componente hijo como props.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-"PokemonDetail":
-"PokemonDetail" es un componente que muestra los detalles de un solo Pokémon, como su nombre, imagen y tipo. Se utiliza para renderizar un único elemento en la lista de Pokémon.
+## Deploy on Vercel
 
-"PokemonList":
-"PokemonList" es un componente que muestra una lista de Pokémon y un campo de búsqueda. Utiliza el patrón "DataFetching" para obtener los datos de la API de Pokémon. Después, utiliza los hooks de useState y useEffect para gestionar el estado de los datos de los Pokémon y el estado de búsqueda. Finalmente, renderiza un conjunto de componentes "PokemonDetail" para cada Pokémon que coincida con la búsqueda.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-En resumen, los componentes "useRef", "DataFetching" y "PokemonDetail" se utilizan para crear una lista de Pokémon con la capacidad de buscar y ver detalles de cada Pokémon individual. El componente "PokemonList" utiliza el patrón "DataFetching" para obtener los datos de la API de Pokémon y renderiza los componentes "PokemonDetail" para mostrar los detalles de cada Pokémon en la lista.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
