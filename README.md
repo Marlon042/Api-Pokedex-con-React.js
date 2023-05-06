@@ -1,19 +1,3 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
 Pasos para crear la aplicacion:
 
 Crear un nuevo proyecto en React utilizando create-react-app y crear una estructura de carpetas básica en la que puedas trabajar.
@@ -50,3 +34,4 @@ qué hace cada uno de los componentes y cómo interactúan entre sí.
 "PokemonList" es un componente que muestra una lista de Pokémon y un campo de búsqueda. Utiliza el patrón "DataFetching" para obtener los datos de la API de Pokémon. Después, utiliza los hooks de useState y useEffect para gestionar el estado de los datos de los Pokémon y el estado de búsqueda. Finalmente, renderiza un conjunto de componentes "PokemonDetail" para cada Pokémon que coincida con la búsqueda.
 
 En resumen, los componentes "useRef", "DataFetching" y "PokemonDetail" se utilizan para crear una lista de Pokémon con la capacidad de buscar y ver detalles de cada Pokémon individual. El componente "PokemonList" utiliza el patrón "DataFetching" para obtener los datos de la API de Pokémon y renderiza los componentes "PokemonDetail" para mostrar los detalles de cada Pokémon en la lista.
+
