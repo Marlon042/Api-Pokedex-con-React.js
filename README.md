@@ -1,3 +1,7 @@
+Poke API / Pokedex
+![image](https://github.com/Marlon042/Api-Pokedex-con-React.js/assets/127366345/fe4378dc-c928-4cb0-8f88-893188091c92)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
